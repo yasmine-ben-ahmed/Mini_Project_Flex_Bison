@@ -1,0 +1,48 @@
+CREATE TABLE Employes (id int,nom varchar,prenom varchar,age int);
+
+-------------------------------------------
+DELETE FROM Employes WHERE id = 5;
+
+
+-------------------------------------
+UPDATE Employes SET poste = 'Directeur des ventes' WHERE id = 3;
+
+UPDATE users SET age=20;
+
+------------------------------------------
+SELECT * FROM fournisseur
+
+SELECT prenom, nom FROM client WHERE numCit=2
+
+SELECT name FROM users;
+--------------------------------------------------------
+INSERT INTO users (name , age) VALUES ('Yakine' , 19 );
+
+INSERT INTO users  VALUES ('Olfa' , 'Ben Ahmed' , 19 , 55254415 );
+--------------------------------------------------------
+
+ALTER TABLE users ADD age int;
+
+ALTER TABLE users MODIFY COLUMN age tinyint;
+
+ALTER TABLE users DROP COLUMN age;
+
+-------------------------------------------------------
+***** différent types d'erreurs.
+
+SELECT users FROM; //selection 
+
+INSERT INTO users(age) VALUES ('Ahmed' , 19); //insertion
+
+-------------------------------------------------------
+******verification des conditions
+
+SELECT * FROM users WHERE nom='Amine' AND prenom='Ben Ahmed';
+
+SELECT * FROM Employees WHERE department IN ('HR', 'Finance', 'Marketing');
+
+SELECT * FROM Orders
+WHERE (product_id, quantity) = (101, 5);
+
+SELECT * FROM Employees WHERE last_name LIKE 'Sm%';
+

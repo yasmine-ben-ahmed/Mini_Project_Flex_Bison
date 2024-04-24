@@ -770,7 +770,7 @@ int yy_flex_debug = 0;
 char yytext[YYLMAX];
 char *yytext_ptr;
 #line 1 "Anal_Lexical.l"
-#line 10 "Anal_Lexical.l"
+#line 9 "Anal_Lexical.l"
     #include "Anal_Syntaxique.tab.h"
 
     static int next_column = 1;
@@ -995,7 +995,7 @@ YY_DECL
 		}
 
 	{
-#line 18 "Anal_Lexical.l"
+#line 17 "Anal_Lexical.l"
 
 #line 1001 "lex.yy.c"
 
@@ -1066,174 +1066,174 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 19 "Anal_Lexical.l"
+#line 18 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return SELECT; }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 20 "Anal_Lexical.l"
+#line 19 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return DELETE; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 21 "Anal_Lexical.l"
+#line 20 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return UPDATE; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 22 "Anal_Lexical.l"
+#line 21 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return INSERT; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 23 "Anal_Lexical.l"
+#line 22 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return CREATE; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 24 "Anal_Lexical.l"
+#line 23 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return ALTER; }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 25 "Anal_Lexical.l"
+#line 24 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return TABLE; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 26 "Anal_Lexical.l"
+#line 25 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return COLUMN; }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 27 "Anal_Lexical.l"
+#line 26 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return ADD; }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 28 "Anal_Lexical.l"
+#line 27 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return DROP; }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 29 "Anal_Lexical.l"
+#line 28 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return MODIFY; }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 30 "Anal_Lexical.l"
+#line 29 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return INTO; }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 31 "Anal_Lexical.l"
+#line 30 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return VALUES; }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 32 "Anal_Lexical.l"
+#line 31 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return FROM; }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 33 "Anal_Lexical.l"
+#line 32 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return WHERE; }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 34 "Anal_Lexical.l"
+#line 33 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return SET; }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 35 "Anal_Lexical.l"
+#line 34 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return AND; }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 36 "Anal_Lexical.l"
+#line 35 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return LIKE; }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 37 "Anal_Lexical.l"
+#line 36 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return IN; }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 38 "Anal_Lexical.l"
+#line 37 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return number; }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 39 "Anal_Lexical.l"
+#line 38 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return DATATYPE; }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 40 "Anal_Lexical.l"
+#line 39 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return attribute; }
 	YY_BREAK
 case 23:
 /* rule 23 can match eol */
 YY_RULE_SETUP
-#line 41 "Anal_Lexical.l"
+#line 40 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return pattren; }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 42 "Anal_Lexical.l"
+#line 41 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return comma; }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 43 "Anal_Lexical.l"
+#line 42 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return semicolon;}
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 44 "Anal_Lexical.l"
+#line 43 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return dot; }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 45 "Anal_Lexical.l"
+#line 44 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return open_parenthesis; }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 46 "Anal_Lexical.l"
+#line 45 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return close_parenthesis; }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 47 "Anal_Lexical.l"
+#line 46 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return all_columns; }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 48 "Anal_Lexical.l"
+#line 47 "Anal_Lexical.l"
 { HANDLE_COLUMN; yylval.string=yytext; return equals_sign; }
 	YY_BREAK
 case 31:
 /* rule 31 can match eol */
 YY_RULE_SETUP
-#line 49 "Anal_Lexical.l"
+#line 48 "Anal_Lexical.l"
 { HANDLE_COLUMN; return END; }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 50 "Anal_Lexical.l"
+#line 49 "Anal_Lexical.l"
 { HANDLE_COLUMN; }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 51 "Anal_Lexical.l"
+#line 50 "Anal_Lexical.l"
 { HANDLE_COLUMN; return incompleted_pattren; }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 52 "Anal_Lexical.l"
+#line 51 "Anal_Lexical.l"
 ECHO;
 	YY_BREAK
 #line 1240 "lex.yy.c"
@@ -2253,7 +2253,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 52 "Anal_Lexical.l"
+#line 51 "Anal_Lexical.l"
 
 
 int yywrap(){ return 1; }

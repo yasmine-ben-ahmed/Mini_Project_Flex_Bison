@@ -1,6 +1,5 @@
 %option caseless
 %option yylineno
-
 pattren (\"[^"]+\")|('[^']+')
 attribute (_?[a-z]+([a-z_]+)?)
 datatype (int|smallint|tinyint|mediumint|bigint|decimal|float|double|real|date|datetime|timestamp|char|varchar)

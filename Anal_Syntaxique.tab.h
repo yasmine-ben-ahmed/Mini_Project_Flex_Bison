@@ -94,7 +94,7 @@ extern int yydebug;
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 66 "Anal_Syntaxique.y"
+#line 72 "Anal_Syntaxique.y"
 
     char* string;
     int number;

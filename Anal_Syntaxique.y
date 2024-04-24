@@ -24,9 +24,13 @@ void afficherStats(){
         return;
     }
 
-    printf("\033[032m***___Requete Valide___***\033[0m\n");
-    printf("\033[032m***____________________***\033[0m\n");
-    printf("C'est une requete de type: %s\n", queryType);
+printf("\n\n");
+printf("\033[032m**********____________________**********\033[0m\n\n");
+printf("\033[032m**********___Requete Valide___**********\033[0m\n");
+printf("\033[032m**********____________________**********\033[0m\n\n");
+printf("\n");
+printf("C'est une requete de type: %s\n", queryType);
+
     if(queryType == "SELECT"){
         if(allFields == 1){
             printf("Tous les champs seront selectionner\n");
@@ -50,14 +54,15 @@ void afficherStats(){
     }
 
     if(queryType == "ALTER"){
-        printf("Cette une operation de %s.\n", operationType);
+        printf("C'est une operation de %s.\n", operationType);
     }
 
     if(queryType == "CREATE"){
         printf("Une table avec %d column(s) sera créer.\n", createdFields);
     }
 
-    printf("\033[032m____********************___\033[0m\n");
+	printf("\n\n");
+    printf("\033[032m____******************************___\033[0m\n\n");
 }
 
 %}
@@ -214,7 +219,32 @@ int yyerror(char *s)
     return (0);
 }
 
-int main(){
+/*int main(){
     yyparse();
     return 0;
 }
+*/
+
+int main(int argc, char *argv[]){
+    FILE *file = fopen("programme.txt", "r");
+    if (!file) {
+        printf("Erreur: Impossible d'ouvrir le fichier programme.txt.\n");
+        return 1; // Quitter le programme avec un code d'erreur
+    }
+
+    // Lire le premier caractère du fichier
+    int firstChar = fgetc(file);
+    if (firstChar == EOF) {
+        printf("Erreur: Le fichier programme.txt est vide.\n");
+        fclose(file);
+        return 1; // Quitter le programme avec un code d'erreur
+    }
+    ungetc(firstChar, file); // Remettre le premier caractère dans le flux
+
+    yyparse();
+    fclose(file);
+    return 0;
+}
+
+
+

@@ -94,8 +94,13 @@ void afficherStats(){
         return;
     }
 
-    printf("\033[032m***___Requete Valide___***\033[0m\n");
-    printf("C'est une requete de type: %s\n", queryType);
+printf("\n\n");
+printf("\033[032m**********____________________**********\033[0m\n\n");
+printf("\033[032m**********___Requete Valide___**********\033[0m\n");
+printf("\033[032m**********____________________**********\033[0m\n\n");
+printf("\n");
+printf("C'est une requete de type: %s\n", queryType);
+
     if(queryType == "SELECT"){
         if(allFields == 1){
             printf("Tous les champs seront selectionner\n");
@@ -119,18 +124,19 @@ void afficherStats(){
     }
 
     if(queryType == "ALTER"){
-        printf("Cette une operation de %s.\n", operationType);
+        printf("C'est une operation de %s.\n", operationType);
     }
 
     if(queryType == "CREATE"){
         printf("Une table avec %d column(s) sera créer.\n", createdFields);
     }
 
-    printf("\033[032m____********************___\033[0m\n");
+	printf("\n\n");
+    printf("\033[032m____******************************___\033[0m\n\n");
 }
 
 
-#line 134 "Anal_Syntaxique.tab.c"
+#line 140 "Anal_Syntaxique.tab.c"
 
 # ifndef YY_CAST
 #  ifdef __cplusplus
@@ -597,11 +603,11 @@ static const yytype_int8 yytranslate[] =
 /* YYRLINE[YYN] -- Source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,   106,   106,   107,   111,   112,   116,   117,   119,   120,
-     122,   123,   125,   126,   128,   130,   134,   135,   136,   140,
-     141,   145,   146,   147,   148,   149,   153,   154,   155,   156,
-     160,   161,   165,   166,   167,   168,   172,   176,   180,   181,
-     185,   186,   187,   188,   192,   193,   197,   198,   199
+       0,   112,   112,   113,   117,   118,   122,   123,   125,   126,
+     128,   129,   131,   132,   134,   136,   140,   141,   142,   146,
+     147,   151,   152,   153,   154,   155,   159,   160,   161,   162,
+     166,   167,   171,   172,   173,   174,   178,   182,   186,   187,
+     191,   192,   193,   194,   198,   199,   203,   204,   205
 };
 #endif
 
@@ -1498,193 +1504,193 @@ yyreduce:
   switch (yyn)
     {
   case 4: /* line: queries semicolon END  */
-#line 111 "Anal_Syntaxique.y"
+#line 117 "Anal_Syntaxique.y"
                           { afficherStats(); return 0; }
-#line 1504 "Anal_Syntaxique.tab.c"
-    break;
-
-  case 6: /* queries: SELECT columns FROM tables  */
-#line 116 "Anal_Syntaxique.y"
-                               { queryType="SELECT"; }
 #line 1510 "Anal_Syntaxique.tab.c"
     break;
 
-  case 7: /* queries: SELECT columns FROM tables WHERE condition  */
-#line 117 "Anal_Syntaxique.y"
-                                               { queryType="SELECT"; }
+  case 6: /* queries: SELECT columns FROM tables  */
+#line 122 "Anal_Syntaxique.y"
+                               { queryType="SELECT"; }
 #line 1516 "Anal_Syntaxique.tab.c"
     break;
 
-  case 8: /* queries: DELETE FROM attribute  */
-#line 119 "Anal_Syntaxique.y"
-                          { queryType="DELETE"; }
+  case 7: /* queries: SELECT columns FROM tables WHERE condition  */
+#line 123 "Anal_Syntaxique.y"
+                                               { queryType="SELECT"; }
 #line 1522 "Anal_Syntaxique.tab.c"
     break;
 
-  case 9: /* queries: DELETE FROM attribute WHERE condition  */
-#line 120 "Anal_Syntaxique.y"
-                                          { queryType="DELETE"; }
+  case 8: /* queries: DELETE FROM attribute  */
+#line 125 "Anal_Syntaxique.y"
+                          { queryType="DELETE"; }
 #line 1528 "Anal_Syntaxique.tab.c"
     break;
 
-  case 10: /* queries: UPDATE attribute SET column_value_list  */
-#line 122 "Anal_Syntaxique.y"
-                                           { queryType="UPDATE"; allFields = 1; }
+  case 9: /* queries: DELETE FROM attribute WHERE condition  */
+#line 126 "Anal_Syntaxique.y"
+                                          { queryType="DELETE"; }
 #line 1534 "Anal_Syntaxique.tab.c"
     break;
 
-  case 11: /* queries: UPDATE attribute SET column_value_list WHERE condition  */
-#line 123 "Anal_Syntaxique.y"
-                                                           { queryType="UPDATE"; }
+  case 10: /* queries: UPDATE attribute SET column_value_list  */
+#line 128 "Anal_Syntaxique.y"
+                                           { queryType="UPDATE"; allFields = 1; }
 #line 1540 "Anal_Syntaxique.tab.c"
     break;
 
-  case 12: /* queries: INSERT INTO attribute VALUES insert_values  */
-#line 125 "Anal_Syntaxique.y"
-                                               { queryType = "INSERT"; }
+  case 11: /* queries: UPDATE attribute SET column_value_list WHERE condition  */
+#line 129 "Anal_Syntaxique.y"
+                                                           { queryType="UPDATE"; }
 #line 1546 "Anal_Syntaxique.tab.c"
     break;
 
-  case 13: /* queries: INSERT INTO attribute insert_columns VALUES insert_values  */
-#line 126 "Anal_Syntaxique.y"
-                                                              { queryType = "INSERT"; }
+  case 12: /* queries: INSERT INTO attribute VALUES insert_values  */
+#line 131 "Anal_Syntaxique.y"
+                                               { queryType = "INSERT"; }
 #line 1552 "Anal_Syntaxique.tab.c"
     break;
 
-  case 14: /* queries: CREATE TABLE attribute open_parenthesis create_list close_parenthesis  */
-#line 128 "Anal_Syntaxique.y"
-                                                                          { queryType = "CREATE"; }
+  case 13: /* queries: INSERT INTO attribute insert_columns VALUES insert_values  */
+#line 132 "Anal_Syntaxique.y"
+                                                              { queryType = "INSERT"; }
 #line 1558 "Anal_Syntaxique.tab.c"
     break;
 
-  case 15: /* queries: ALTER TABLE attribute alter_option  */
-#line 130 "Anal_Syntaxique.y"
-                                       { queryType = "ALTER"; }
+  case 14: /* queries: CREATE TABLE attribute open_parenthesis create_list close_parenthesis  */
+#line 134 "Anal_Syntaxique.y"
+                                                                          { queryType = "CREATE"; }
 #line 1564 "Anal_Syntaxique.tab.c"
     break;
 
-  case 16: /* columns: all_columns  */
-#line 134 "Anal_Syntaxique.y"
-                { allFields = 1; }
+  case 15: /* queries: ALTER TABLE attribute alter_option  */
+#line 136 "Anal_Syntaxique.y"
+                                       { queryType = "ALTER"; }
 #line 1570 "Anal_Syntaxique.tab.c"
     break;
 
-  case 17: /* columns: attribute  */
-#line 135 "Anal_Syntaxique.y"
-              { fieldsCount++;}
+  case 16: /* columns: all_columns  */
+#line 140 "Anal_Syntaxique.y"
+                { allFields = 1; }
 #line 1576 "Anal_Syntaxique.tab.c"
     break;
 
-  case 18: /* columns: attribute comma columns  */
-#line 136 "Anal_Syntaxique.y"
-                            { fieldsCount++;}
+  case 17: /* columns: attribute  */
+#line 141 "Anal_Syntaxique.y"
+              { fieldsCount++;}
 #line 1582 "Anal_Syntaxique.tab.c"
     break;
 
-  case 19: /* tables: attribute  */
-#line 140 "Anal_Syntaxique.y"
-              { tablesCount++; }
+  case 18: /* columns: attribute comma columns  */
+#line 142 "Anal_Syntaxique.y"
+                            { fieldsCount++;}
 #line 1588 "Anal_Syntaxique.tab.c"
     break;
 
-  case 20: /* tables: attribute comma tables  */
-#line 141 "Anal_Syntaxique.y"
-                           { tablesCount++; }
+  case 19: /* tables: attribute  */
+#line 146 "Anal_Syntaxique.y"
+              { tablesCount++; }
 #line 1594 "Anal_Syntaxique.tab.c"
     break;
 
-  case 32: /* column_value_list: attribute equals_sign pattren  */
-#line 165 "Anal_Syntaxique.y"
-                                  { updatedFields++; }
+  case 20: /* tables: attribute comma tables  */
+#line 147 "Anal_Syntaxique.y"
+                           { tablesCount++; }
 #line 1600 "Anal_Syntaxique.tab.c"
     break;
 
-  case 33: /* column_value_list: attribute equals_sign pattren comma column_value_list  */
-#line 166 "Anal_Syntaxique.y"
-                                                          { updatedFields++; }
+  case 32: /* column_value_list: attribute equals_sign pattren  */
+#line 171 "Anal_Syntaxique.y"
+                                  { updatedFields++; }
 #line 1606 "Anal_Syntaxique.tab.c"
     break;
 
-  case 34: /* column_value_list: attribute equals_sign number  */
-#line 167 "Anal_Syntaxique.y"
-                                 { updatedFields++; }
+  case 33: /* column_value_list: attribute equals_sign pattren comma column_value_list  */
+#line 172 "Anal_Syntaxique.y"
+                                                          { updatedFields++; }
 #line 1612 "Anal_Syntaxique.tab.c"
     break;
 
-  case 35: /* column_value_list: attribute equals_sign number comma column_value_list  */
-#line 168 "Anal_Syntaxique.y"
-                                                         { updatedFields++; }
+  case 34: /* column_value_list: attribute equals_sign number  */
+#line 173 "Anal_Syntaxique.y"
+                                 { updatedFields++; }
 #line 1618 "Anal_Syntaxique.tab.c"
     break;
 
-  case 38: /* insert_columns_list: attribute  */
-#line 180 "Anal_Syntaxique.y"
-              { insertToFields++; }
+  case 35: /* column_value_list: attribute equals_sign number comma column_value_list  */
+#line 174 "Anal_Syntaxique.y"
+                                                         { updatedFields++; }
 #line 1624 "Anal_Syntaxique.tab.c"
     break;
 
-  case 39: /* insert_columns_list: attribute comma insert_columns_list  */
-#line 181 "Anal_Syntaxique.y"
-                                        { insertToFields++; }
+  case 38: /* insert_columns_list: attribute  */
+#line 186 "Anal_Syntaxique.y"
+              { insertToFields++; }
 #line 1630 "Anal_Syntaxique.tab.c"
     break;
 
-  case 40: /* insert_values_list: pattren  */
-#line 185 "Anal_Syntaxique.y"
-            { insertValuesFields++; }
+  case 39: /* insert_columns_list: attribute comma insert_columns_list  */
+#line 187 "Anal_Syntaxique.y"
+                                        { insertToFields++; }
 #line 1636 "Anal_Syntaxique.tab.c"
     break;
 
-  case 41: /* insert_values_list: number  */
-#line 186 "Anal_Syntaxique.y"
-           { insertValuesFields++; }
+  case 40: /* insert_values_list: pattren  */
+#line 191 "Anal_Syntaxique.y"
+            { insertValuesFields++; }
 #line 1642 "Anal_Syntaxique.tab.c"
     break;
 
-  case 42: /* insert_values_list: pattren comma insert_values_list  */
-#line 187 "Anal_Syntaxique.y"
-                                     { insertValuesFields++; }
+  case 41: /* insert_values_list: number  */
+#line 192 "Anal_Syntaxique.y"
+           { insertValuesFields++; }
 #line 1648 "Anal_Syntaxique.tab.c"
     break;
 
-  case 43: /* insert_values_list: number comma insert_values_list  */
-#line 188 "Anal_Syntaxique.y"
-                                    { insertValuesFields++; }
+  case 42: /* insert_values_list: pattren comma insert_values_list  */
+#line 193 "Anal_Syntaxique.y"
+                                     { insertValuesFields++; }
 #line 1654 "Anal_Syntaxique.tab.c"
     break;
 
-  case 44: /* create_list: attribute DATATYPE  */
-#line 192 "Anal_Syntaxique.y"
-                       { createdFields++; }
+  case 43: /* insert_values_list: number comma insert_values_list  */
+#line 194 "Anal_Syntaxique.y"
+                                    { insertValuesFields++; }
 #line 1660 "Anal_Syntaxique.tab.c"
     break;
 
-  case 45: /* create_list: attribute DATATYPE comma create_list  */
-#line 193 "Anal_Syntaxique.y"
-                                         { createdFields++; }
+  case 44: /* create_list: attribute DATATYPE  */
+#line 198 "Anal_Syntaxique.y"
+                       { createdFields++; }
 #line 1666 "Anal_Syntaxique.tab.c"
     break;
 
-  case 46: /* alter_option: ADD attribute DATATYPE  */
-#line 197 "Anal_Syntaxique.y"
-                           { operationType = "Ajout"; }
+  case 45: /* create_list: attribute DATATYPE comma create_list  */
+#line 199 "Anal_Syntaxique.y"
+                                         { createdFields++; }
 #line 1672 "Anal_Syntaxique.tab.c"
     break;
 
-  case 47: /* alter_option: DROP COLUMN attribute  */
-#line 198 "Anal_Syntaxique.y"
-                          { operationType = "Suppression"; }
+  case 46: /* alter_option: ADD attribute DATATYPE  */
+#line 203 "Anal_Syntaxique.y"
+                           { operationType = "Ajout"; }
 #line 1678 "Anal_Syntaxique.tab.c"
     break;
 
-  case 48: /* alter_option: MODIFY COLUMN attribute DATATYPE  */
-#line 199 "Anal_Syntaxique.y"
-                                     { operationType = "Modification"; }
+  case 47: /* alter_option: DROP COLUMN attribute  */
+#line 204 "Anal_Syntaxique.y"
+                          { operationType = "Suppression"; }
 #line 1684 "Anal_Syntaxique.tab.c"
     break;
 
+  case 48: /* alter_option: MODIFY COLUMN attribute DATATYPE  */
+#line 205 "Anal_Syntaxique.y"
+                                     { operationType = "Modification"; }
+#line 1690 "Anal_Syntaxique.tab.c"
+    break;
 
-#line 1688 "Anal_Syntaxique.tab.c"
+
+#line 1694 "Anal_Syntaxique.tab.c"
 
       default: break;
     }
@@ -1908,7 +1914,7 @@ yyreturnlab:
   return yyresult;
 }
 
-#line 202 "Anal_Syntaxique.y"
+#line 208 "Anal_Syntaxique.y"
 
 
 int yyerror(char *s)
@@ -1927,3 +1933,28 @@ int main(){
     yyparse();
     return 0;
 }
+
+
+/*int main(int argc, char *argv[]){
+    FILE *file = fopen("programme.txt", "r");
+    if (!file) {
+        printf("Erreur: Impossible d'ouvrir le fichier programme.txt.\n");
+        return 1; // Quitter le programme avec un code d'erreur
+    }
+
+    // Lire le premier caractère du fichier
+    int firstChar = fgetc(file);
+    if (firstChar == EOF) {
+        printf("Erreur: Le fichier programme.txt est vide.\n");
+        fclose(file);
+        return 1; // Quitter le programme avec un code d'erreur
+    }
+    ungetc(firstChar, file); // Remettre le premier caractère dans le flux
+
+    yyparse();
+    fclose(file);
+    return 0;
+}
+*/
+
+

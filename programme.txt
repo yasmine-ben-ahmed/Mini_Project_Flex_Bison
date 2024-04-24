@@ -1,1 +1,1 @@
-SELECT nom FROM users;
+CREATE TABLE Employes (id int,nom varchar,prenom varchar,age int);
